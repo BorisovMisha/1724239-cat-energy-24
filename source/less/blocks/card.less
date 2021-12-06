@@ -6,16 +6,17 @@
   border-right: 1px solid @gray-ultra-lights;
 }
 
-.card__wrapper {}
-
-.card__image-link {}
-
 .card__content {
   padding-top: 20px;
 }
 
 .card__title-link {
+  font-size: @font-size;
+  color: @gray-dark;
+  font-weight: 400;
+  line-height: 1.25em;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .card__title {
@@ -35,8 +36,6 @@
   padding-right: 17px;
 }
 
-.card__options tr {}
-
 .card__options-title,
 .card__options-value {
   font-size: @font-size-xs;
@@ -44,5 +43,8 @@
 }
 
 .card__button {
+  display: block;
+  width: 280px;
+  height: 40px;
   margin-right: 20px;
 }

@@ -1,8 +1,31 @@
 .categories {
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 79px;
+    padding-bottom: 0;
+  }
 }
 
-.categories__list {}
+.categories__list {
+  .no-list();
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 .categories__item {
   margin-top: 22px;
@@ -24,7 +47,6 @@
   text-transform: uppercase;
   background-color: @gray-lighten;
 }
-
 
 .categories__item-content {
   margin-top: 0;

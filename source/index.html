@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -20,10 +21,10 @@
           <a class="main-nav__link main-nav__link--active">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Каталог продукции</a>
+          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Подбор программы</a>
+          <a class="main-nav__link" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -35,9 +36,9 @@
       <div class="promo__wrapper">
         <h1 class="promo__title">Функциональное питание для котов</h1>
         <p class="promo__content">Занялся собой? Займись котом!</p>
-        <div class="promo__image">
+        <div class="promo__cat-energy">
           <picture>
-            <img src="#" alt="cat-energy">
+            <img class="cat-energy__promo-image" src="https://via.placeholder.com/25" alt="cat-energy">
           </picture>
         </div>
         <a class="promo__button" href="#">Подобрать программу</a>
@@ -69,7 +70,7 @@
 
     <section class="advantages">
       <h2 class="advantages__title">Как это работает</h2>
-      <ul class="advantafes__list">
+      <ul class="advantages__list">
         <li class="advantages__item advantages__item--benefit">
           Функциональное питание содержит только полезные питательные
           вещества.
@@ -111,28 +112,30 @@
         <div class="example__comparsion">
           <div class="example__comparsion-before">
             <picture>
-              <img src="https://via.placeholder.com/150" alt="Fat cat">
+              <img class="example__before-image" src="https://via.placeholder.com/150" alt="Fat cat">
             </picture>
           </div>
           <div class="example__comparsion-after">
             <picture>
-              <img src="https://via.placeholder.com/150" alt="Thin cat">
+              <img class="example__after-image" src="https://via.placeholder.com/150" alt="Thin cat">
             </picture>
           </div>
         </div>
-        <div class="example__view">
-          <button class="example__view-before">Было</button>
-          <div class="example__view-field">
-            <div class="example__field-before"></div>
-            <div class="example__field-after"></div>
+        <div class="example__switch">
+          <button class="example__switch-before">Было</button>
+          <div class="example__switch-state">
+            <div class="example__state-before"></div>
+            <div class="example__state-after"></div>
           </div>
-          <button class="example__view-after">Стало</button>
+          <button class="example__switch-after">Стало</button>
         </div>
       </div>
       <!--example section wrapper end-->
     </section>
     <!--example section end-->
+  </main>
 
+  <footer class="page-footer">
     <section class="contacts">
       <div class="contacts__wrapper">
         <div class="contacts__field">
@@ -144,47 +147,44 @@
         </div>
       </div>
       <div class="contacts__map">
-        <iframe src="https://via.placeholder.com/150"></iframe>
+        <iframe class="contacts__map-view" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1557585366427!5m2!1sru!2sru" height="362" style="border:0" allowfullscreen=""></iframe>
       </div>
     </section>
     <!--contacts section end-->
-
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <a class="page-footer__logo" href="#">
-          <img class="page-footer__logo-text" src="https://via.placeholder.com/25" alt="cat-energy">
-        </a>
-        <ul class="page-footer__social-list social">
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="#">
-              <span class="visually-hidden">Вконтакте</span>
-              <svg></svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--insta" href="#">
-              <span class="visually-hidden">Инстаграмм</span>
-              <svg></svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--fb" href="#">
-              <span class="visually-hidden">Фейсбук</span>
-              <svg></svg>
-            </a>
-          </li>
-        </ul> <!-- social ul end-->
-        <p class="page-footer__copyright">
-          <a class="page-footer__copyright-title" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg></svg>
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo" href="#">
+        <img class="page-footer__logo-text" src="https://via.placeholder.com/25" alt="cat-energy">
+      </a>
+      <ul class="page-footer__social-list social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#">
+            <span class="visually-hidden">Вконтакте</span>
+            <!--svg картинка -->
           </a>
-        </p>
-      </div>
-      <!--footer wrapper end-->
-    </footer>
-    <!--footer end-->
-  </main>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--insta" href="#">
+            <span class="visually-hidden">Инстаграмм</span>
+            <!--svg картинка -->
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#">
+            <span class="visually-hidden">Фейсбук</span>
+            <!--svg картинка -->
+          </a>
+        </li>
+      </ul> <!-- social ul end-->
+      <p class="page-footer__copyright">
+        <a class="page-footer__copyright-title" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <!--svg картинка -->
+        </a>
+      </p>
+    </div>
+    <!--footer wrapper end-->
+  </footer>
+  <!--footer end-->
 
 </body>
 

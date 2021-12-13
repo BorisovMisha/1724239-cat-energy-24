@@ -1,59 +1,75 @@
 .catalog {
-  width: @mobile-width;
-  margin: 0 auto;
-  padding-top: 15px;
-  background-color: #ffffff;
+    width: @mobile-width;
+    margin: 0 auto;
+    padding-top: 15px;
+    background-color: #ffffff;
 }
 
 .catalog__title {
-  margin-top: 0;
-  margin-bottom: 28px;
-  padding: 0 20px;
-  font-family: @alternate-font;
-  font-size: @font-size-xxl;
-  font-weight: 400;
-  line-height: 1.66em;
+    margin-top: 0;
+    margin-bottom: 28px;
+    padding: 0 20px;
+    font-family: @alternate-font;
+    font-size: @font-size-xxl;
+    font-weight: 400;
+    line-height: 1.66em;
 }
 
 .catalog__list {
-  .no-list();
+    .no-list();
+
+    @media(min-width: @tablet-width) {
+        display: grid;
+        grid-template-columns: 324px 324px;
+        grid-column-gap: 60px;
+        grid-row-gap: 60px;
+        justify-content: center;
+    }
+
+    @media(min-width: @desktop-width) {
+        display: grid;
+        grid-template-columns: 245px 245px 245px 245px;
+        grid-column-gap: 80px;
+        grid-row-gap: 63px;
+        justify-content: center;
+    }
 }
 
 .catalog__item {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .catalog__more {
-  padding-top: 80px;
+    padding-top: 80px;
 }
 
 .catalog__more-title {
-  padding-left: 40px;
-  margin-top: 0;
-  margin-bottom: 8px;
+    padding-left: 40px;
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 .catalog__more-link {
-  font-family: @alternate-font;
-  color: @gray-darkest;
-  font-size: @font-size;
-  font-weight: 400;
-  line-height: 1.25em;
-  text-transform: uppercase;
-  text-decoration: none;
+    font-family: @alternate-font;
+    color: @gray-darkest;
+    font-size: @font-size;
+    font-weight: 400;
+    line-height: 1.25em;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 .catalog__more-text {
-  margin-top: 0;
-  margin-bottom: 22px;
-  padding-left: 30px;
-  font-size: @font-size-xs;
-  line-height: 1.33em;
+    margin-top: 0;
+    margin-bottom: 22px;
+    padding-left: 30px;
+    font-size: @font-size-xs;
+    line-height: 1.33em;
 }
 
 .catalog__more-show {
-  margin-right: 20px;
-  font-family: @alternate-font;
-  color: @gray-darker;
-  background-color: @gray-lighten;
+    margin-right: 20px;
+    font-family: @alternate-font;
+    color: @gray-darker;
+    background-color: @gray-lighten;
 }

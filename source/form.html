@@ -38,7 +38,7 @@
         <p class="program-select__hint">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
           <div class="form__wrapper">
-            <div class="form__fields">
+            <div class="form__fields form__fields--cat">
               <label class="field-text">
                 <span class="field-text__title">Имя:*</span>
                 <input class="field-text__value" type="text" name="nickname" placeholder="Барсик" required>
@@ -53,7 +53,7 @@
               </label>
             </div>
             <!--cat info div end-->
-            <div class="form__fields form__fields-choice">
+            <div class="form__fields form__fields--choice">
               <label class="field-radio">
                 <input class="field-radio__state" type="radio" name="choice">
                 <span class="field-radio__title">Похудение</span>
@@ -68,7 +68,7 @@
               </label>
             </div>
             <!--choice div end-->
-            <div class="form__fields form__fields-contacts">
+            <div class="form__fields form__fields--contacts">
               <h2 class="form__fields-title">Контактные данные (владельца кота)</h2>
               <label class="field-text">
                 <span class="field-text__title">E-mail:*</span>
@@ -80,14 +80,14 @@
               </label>
             </div>
             <!--contacts div end-->
-            <div class="form__fields form__fields-comment">
+            <div class="form__fields form__fields--comment">
               <h2 class="form__fields-title">Комментарий</h2>
               <div class="field-text field-text--comment">
                 <textarea class="field-text__value field-text__value--comment" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
             </div>
             <!--comment div end-->
-            <div class="form__fields form__fields-add">
+            <div class="form__fields form__fields--add">
               <h2 class="form__fields-title">Дополнительно</h2>
               <label class="field-checkbox">
                 <input class="field-checkbox__value" type="checkbox" name="sugar-subs" checked>
@@ -161,9 +161,10 @@
         </li>
       </ul> <!-- social ul end-->
       <p class="page-footer__copyright">
-        <a class="page-footer__copyright-title" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="page-footer__copyright-title">HTML Academy</span>
           <!--svg картинка -->
+          <img class="page-footer__copyright-image" src="img/icons/icon-htmlacademy.svg" width="27" height="34" alt="icon-academy">
         </a>
       </p>
     </div>

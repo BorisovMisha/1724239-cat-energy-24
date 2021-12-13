@@ -8,25 +8,26 @@
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
-  width: @mobile-width;
+  width: 280px;
   margin: 0 auto;
-  padding: 0 20px;
+  /*padding: 0 20px;*/
   padding-top: 40px;
   padding-bottom: 22px;
 
   @media (min-width: @tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
-    width: @tablet-width;
-    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 708px;
     padding-top: 50px;
-    padding-bottom: 29px;
+    padding-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: @desktop-width;
-    padding-left: 40px;
-    padding-right: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1220px;
+    padding-top: 50px;
+    padding-bottom: 30px;
   }
 }
 
@@ -36,11 +37,18 @@ page-footer__logo {
   text-align: center;
   vertical-align: middle;
   border-bottom: 1px solid @color-border-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 15px;
+    border: none;
+  }
 }
 
 .page-footer__social-list {
   .no-list();
+
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid @color-border-grey;
@@ -53,30 +61,32 @@ page-footer__logo {
 
 .page-footer__copyright {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
 }
 
+.page-footer__copyright-link {
+  display: flex;
+  align-items: center;
+  column-gap: 28px;
+  text-align: right;
+  text-decoration: none;
+}
+
 .page-footer__copyright-title {
-  margin-top: 30px;
   color: @gray-darker;
   font-size: @font-size;
-  line-height: 1em;
-  text-decoration: none;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 16px;
-    margin-right: 22px;
-  }
+  line-height: 20px;
 }
 
 .page-footer__copyright-logo {
   width: 27px;
   height: 34px;
-
   margin-top: 23px;
-    @media (min-width: @tablet-width) {
-    margin-top: 9px;
-  }
+  margin-left: auto;
 
+  @media (min-width: @tablet-width) {
+    margin-left: 22px;
+  }
 }

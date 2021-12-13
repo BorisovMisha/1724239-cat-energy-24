@@ -1,17 +1,26 @@
 .field-action {
-  margin-top: 22px;
-  padding: 0 20px;
-  padding-bottom: 31px;
+    margin-top: 22px;
+    padding: 0 20px;
+    padding-bottom: 31px;
+
+    @media(min-width:@desktop-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        outline: 1px solid black;
+    }
 }
 
 .field-action__hint {
-  margin-top: 21px;
-  line-height: 1.14em;
-  text-align: center;
+    margin-top: 21px;
+    line-height: 1.14em;
+    text-align: center;
 }
 
 .field-action__button {
-  display: block;
-  width: 282px;
-  height: 52px;
+    display: block;
+    width: 282px;
+    height: 52px;
 }

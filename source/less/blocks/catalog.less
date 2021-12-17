@@ -48,16 +48,29 @@
   padding-left: 40px;
   margin-top: 0;
   margin-bottom: 8px;
-
-  &::before {
+    &::before {
     content: "";
     position: absolute;
     top: 40px;
     left: 144px;
-    background-color: @color-background;
-    background-image: url("../img/icons/icon-plus.svg");
-    background-repeat: no-repeat;
+    width: 30px;
+    height: 2px;
+
+    background-color: @gray;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 144px;
+    width: 30px;
+    height: 2px;
+
+    background-color: @gray;
+    transform: rotate(90deg);
+  }
+
 }
 
 .catalog__more-link {

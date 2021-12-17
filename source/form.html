@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js')
+
+  </script>
 </head>
 
 <body>
@@ -72,11 +76,15 @@
               <h2 class="form__fields-title form__fields-title--contacts">Контактные данные (владельца кота)</h2>
               <label class="field-text">
                 <span class="field-text__title">E-mail:*</span>
-                <input class="field-text__value field-text__value--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                <div class="field-text__icon field-text__icon-email">
+                  <input class="field-text__value field-text__value--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                </div>
               </label>
               <label class="field-text">
                 <span class="field-text__title">Телефон:*</span>
-                <input class="field-text__value field-text__value--telephone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+                <div class="field-text__icon field-text__icon-telephone">
+                  <input class="field-text__value field-text__value--telephone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+                </div>
               </label>
             </div>
             <!--contacts div end-->
@@ -190,6 +198,7 @@
     <!--footer wrapper end-->
   </footer>
   <!--footer end-->
+  <script src="js/mobile-menu.js"></script>
 </body>
 
 </html>

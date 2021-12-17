@@ -5,6 +5,7 @@
   column-gap: 13px;
   margin-bottom: 15px;
   padding-right: 20px;
+  /* position: relative; */
 }
 
 .field-text__title {
@@ -50,24 +51,29 @@
   text-transform: uppercase;
 }
 
-.field-text__value--email {
+
+.field-text__icon {
   position: relative;
-  margin-left: 12px;
 
   &::after {
     content: "";
     position: absolute;
-    top: 40px;
-    right: 0;
+    display: block;
+    top: 2px;
+    right: 2px;
     width: 150px;
-    height: 3px;
-    background-color: @color-main;
-    background-image: url("../img/icons/icon-gift.svg");
-    background-repeat: no-repeat;
+    height: 17px;
   }
 }
 
-.field-text__value--telephone {
-  width: 50%;
-  margin-left: 20px;
+.field-text__icon-email::after {
+  background-image: url("../img/icons/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.field-text__icon-telephone::after {
+  background-image: url("../img/icons/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: right;
 }

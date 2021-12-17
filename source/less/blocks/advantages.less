@@ -9,9 +9,6 @@
   @media (min-width: @tablet-width) {
     width: 708px;
     padding: 0;
-    /*padding: 0 30px;
-        padding-top: 14px;
-        padding-bottom: 2px; */
     border-bottom: 1px solid @gray-ights;
   }
 
@@ -32,7 +29,7 @@
   line-height: 1.66em;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 8px;
+    margin-bottom: 50px;
     font-size: @font-size-xxxl;
     line-height: 1em;
   }
@@ -69,9 +66,10 @@
     content: "";
     position: absolute;
     left: -80px;
-    top: -1px;
+    top: 0;
     width: 60px;
     height: 60px;
+    z-index: 0;
     background-color: @color-main;
     background-position: center;
     background-size: 50px;
@@ -80,21 +78,45 @@
 
   @media (min-width: @tablet-width) {
     width: 245px;
-    /*
-        margin-bottom: 50px;
-        padding-top: 145px;
-        padding-bottom: 50px;
-       */
+    /*  margin-top: 30px;
+    margin-bottom: 80px; */
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin-bottom: 37px;
     font-size: @font-size;
     line-height: 1.5em;
+
+    &::before {
+      left: 0;
+      top: -50px;
+    }
+
+    &::after {
+      content: "1";
+      position: absolute;
+      left: 115px;
+      top: 0;
+      z-index: -1;
+      font-size: 200px;
+      font-family: "oswald", "ArialMT", sans-serif;
+      color: @gray-very-lights;
+    }
+
+    &:nth-child(2)::after {
+      content: "2";
+    }
+
+    &:nth-child(3)::after {
+      content: "3";
+    }
+
+    &:last-child::after {
+      content: "4";
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
-    /*
-        margin-bottom: 0;
-        padding-bottom: 47px;
-        */
   }
 }
 

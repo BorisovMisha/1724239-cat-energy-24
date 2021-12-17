@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js')
+
+  </script>
 </head>
 
 <body>
@@ -326,8 +330,7 @@
     <!--contacts section end-->
     <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="#">
-        <img class="page-footer__logo-text" src="img/logos/logo-text.svg"
-         width="128" height="24" alt="cat-energy">
+        <img class="page-footer__logo-text" src="img/logos/logo-text.svg" width="128" height="24" alt="cat-energy">
       </a>
       <ul class="page-footer__social-list social">
         <li class="social__item">
@@ -379,6 +382,7 @@
     <!--footer wrapper end-->
   </footer>
   <!--footer end-->
+  <script src="js/mobile-menu.js"></script>
 </body>
 
 </html>

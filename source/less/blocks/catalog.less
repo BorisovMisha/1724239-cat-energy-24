@@ -40,6 +40,9 @@
 }
 
 .catalog__more {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding-top: 80px;
   position: relative;
 }
@@ -48,7 +51,8 @@
   padding-left: 40px;
   margin-top: 0;
   margin-bottom: 8px;
-    &::before {
+
+  &::before {
     content: "";
     position: absolute;
     top: 40px;
@@ -90,7 +94,7 @@
   font-size: @font-size-xs;
   line-height: 1.33em;
 }
-
+  /*кнопка Показать все*/
 .catalog__more-show {
   display: block;
   width: 100%;
@@ -98,4 +102,21 @@
   font-family: @alternate-font;
   color: @gray-darker;
   background-color: @gray-lighten;
+
+  @media (min-width: @tablet-width) {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+  }
+       /*состояния по наведению*/
+  &:hover {
+    background-color: @gray-ultra-lights;
+  }
+
+  &:active, &:focus {
+    color: @color-text-focus;
+  }
 }

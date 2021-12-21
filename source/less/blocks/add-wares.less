@@ -23,6 +23,7 @@
   }
 }
 
+/*Заголовок Дополнительные товары*/
 .add-wares__title {
   position: relative;
   margin: 0;
@@ -36,14 +37,27 @@
   background-color: #ffffff;
   width: 100%;
 
+  /*зелёная линия справа*/
   &::after {
     content: "";
     position: absolute;
     top: 14px;
     right: 0;
     width: 50px;
-    height: 3px;
+    height: 2px;
     background-color: @color-main;
+
+    @media (min-width: @tablet-width) {
+      width: 460px;
+      right: 0;
+      top: 15px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 980px;
+      right: 0;
+      top: 15px;
+    }
   }
 }
 
@@ -83,6 +97,7 @@
   text-transform: uppercase;
 }
 
+/*кнопка Заказать*/
 .add-wares__button {
   display: block;
   padding-top: 10px;
@@ -93,7 +108,22 @@
   line-height: 20px;
 
   @media(min-width: @tablet-width) {
+    width: 100%;
     grid-column: 1/-1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
+
+  /* состояния по наведению */
+  &:hover {
+    background-color: @color-background-hover;
+  }
+
+  &:active,
+  &:focus {
+    color: @color-background-focus;
   }
 }
 
@@ -128,5 +158,13 @@
     background-image: url("../img/icons/icon-gift.svg");
     background-repeat: no-repeat;
   }
-
+  /*
+  @media(min-width: @tablet-width) {
+    margin: auto;
+    &::before {
+      top: 75px;
+      left: 325px;
+    }
+  }
+  */
 }

@@ -32,16 +32,27 @@
     padding-bottom: 30px;
   }
 }
-
+  /*Логотип - текст Cat Energy*/
 page-footer__logo {
   text-align: center;
   vertical-align: middle;
   border-bottom: 1px solid @color-border-grey;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  /*
   @media (min-width: @tablet-width) {
     margin-top: 15px;
     border: none;
   }
+  */
 }
 
 .page-footer__social-list {
@@ -74,18 +85,36 @@ page-footer__logo {
   text-decoration: none;
 }
 
+/*Надпись HTML-academy*/
 .page-footer__copyright-title {
   color: @gray-darker;
   font-size: @font-size;
   line-height: 20px;
+
+  &:focus,
+  &:active {
+    fill: @color-main;
+    opacity: 0.3;
+  }
 }
 
+/*Логотип HTML-academy*/
 .page-footer__copyright-image {
   width: 27px;
   height: 34px;
   margin-left: auto;
+  fill: @gray-ultra-dark;
 
   @media (min-width: @tablet-width) {
     margin-left: 22px;
+  }
+
+  &:hover {
+    fill: @color-main;
+  }
+  &:focus,
+  &:active {
+    fill: @color-main;
+    opacity: 0.3;
   }
 }

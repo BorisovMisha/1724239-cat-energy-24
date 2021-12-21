@@ -82,6 +82,7 @@
   }
 }
 
+ /*кнопка Подобрать программу*/
 .promo__button {
   display: block;
   margin: 0 auto;
@@ -97,9 +98,17 @@
   text-align: center;
   background-color: @color-main;
   border: none;
+     /*состояния при наведении*/
+  &:hover {
+    background-color: @color-background-hover;
+  }
+  &:active,
+  &:focus {
+    color: @color-background-focus;
+  }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    /*центрироватся не должна*/
+    /*на десктопе центрироваться не должна*/
   }
 }

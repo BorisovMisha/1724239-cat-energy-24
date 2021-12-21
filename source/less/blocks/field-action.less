@@ -1,26 +1,59 @@
 .field-action {
-    margin-top: 22px;
-    padding: 0 20px;
-    padding-bottom: 31px;
+  margin-top: 22px;
+  padding: 0 20px;
+  padding-bottom: 31px;
 
-    @media(min-width:@desktop-width) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        grid-column-start: 1;
-        grid-column-end: 5;
-        outline: 1px solid black;
-    }
+  @media(min-width:@desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    outline: 1px solid black;
+  }
 }
 
 .field-action__hint {
-    margin-top: 21px;
-    line-height: 1.14em;
-    text-align: center;
+  margin-top: 21px;
+  line-height: 1.14em;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 15px;
+    font-size: @font-size;
+    line-height: 1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    text-align: left;
+  }
 }
 
+/*кнопка Отправить заявку*/
 .field-action__button {
-    display: block;
+  display: block;
+  width: 282px;
+  height: 52px;
+
+  @media (min-width: @tablet-width) {
     width: 282px;
-    height: 52px;
+    font-size: @font-size-md;
+    line-height: 1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
+
+  /*состояния по наведению*/
+  &:hover {
+    background-color: @color-background-hover;
+  }
+
+  &:active,
+  &:focus {
+    color: @color-background-focus;
+  }
+
 }

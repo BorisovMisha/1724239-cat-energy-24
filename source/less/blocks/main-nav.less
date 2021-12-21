@@ -15,7 +15,6 @@
     margin: 0;
     margin-left: auto;
   }
-
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -116,6 +115,15 @@
   text-align: center;
   border-bottom: 1px solid @gray-ights;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     padding-bottom: 7px;
     font-size: @font-size-m;
@@ -132,6 +140,9 @@
 }
 
 .main-nav__link--active {
+  &:hover {
+    opacity: 1;
+  }
 
   @media (min-width: @tablet-width) {
     border-bottom: 2px solid @color-main;

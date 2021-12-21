@@ -2,10 +2,10 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   column-gap: 13px;
   margin-bottom: 15px;
   padding-right: 20px;
-  /* position: relative; */
 }
 
 .field-text__title {
@@ -22,6 +22,7 @@
   height: 174px;
 }
 
+/*поля для ввода данных анкеты*/
 .fied-text__value {
   flex-grow: 1;
   height: 44px;
@@ -34,6 +35,20 @@
   line-height: 1.125em;
   text-transform: uppercase;
   border: 1px solid @gray-ights;
+
+    /*состояния при наведении*/
+  &:hover {
+    border-color: @gray-very-lights;
+  }
+
+  &:active,
+  &:focus {
+    outline: 2px solid @gray-darker;
+  }
+
+  &:focus:invalid {
+    outline: 2px solid #ff8282;
+  }
 }
 
 .field-text__value--comment {

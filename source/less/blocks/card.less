@@ -1,65 +1,84 @@
 .card {
-    padding-left: 20px;
-    padding-bottom: 24px;
-    border-left: 1px solid @gray-ultra-lights;
-    border-top: 1px solid @gray-ultra-lights;
-    border-right: 1px solid @gray-ultra-lights;
+  padding-left: 20px;
+  padding-bottom: 24px;
+  border-left: 1px solid @gray-ultra-lights;
+  border-top: 1px solid @gray-ultra-lights;
+  border-right: 1px solid @gray-ultra-lights;
 }
 
 .card-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    @media(min-width: @tablet-width) {
-        grid-template-columns: 1fr;
-    }
+  @media(min-width: @tablet-width) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card__content {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .card__title-link {
-    font-size: @font-size;
-    color: @gray-dark;
-    font-weight: 400;
-    line-height: 1.25em;
-    text-decoration: none;
-    text-transform: uppercase;
+  font-size: @font-size;
+  color: @gray-dark;
+  font-weight: 400;
+  line-height: 1.25em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .card__title {
-    width: 80px;
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-family: @alternate-font;
-    color: @gray-darkest;
-    font-size: @font-size;
-    font-weight: 400;
-    line-height: 1.25em;
-    text-transform: uppercase;
+  width: 80px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: @alternate-font;
+  color: @gray-darkest;
+  font-size: @font-size;
+  font-weight: 400;
+  line-height: 1.25em;
+  text-transform: uppercase;
 }
 
 .card__options {
-    width: 100%;
-    border-collapse: collapse;
-    padding-right: 17px;
+  width: 100%;
+  border-collapse: collapse;
+  padding-right: 17px;
 }
 
 .card__options-value {
-    text-align: right;
+  text-align: right;
 }
 
 .card__options-title,
 .card__options-value {
-    font-size: @font-size-xs;
-    line-height: 1.1em;
+  font-size: @font-size-xs;
+  line-height: 1.1em;
 }
-
+   /*кнопка Заказать*/
 .card__button {
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100%;
-    margin-right: 20px;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  margin-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+  }
+
+  /*состояния по наведению*/
+  &:hover {
+    background-color: @color-background-hover;
+  }
+
+  &:active, &:focus {
+    color: @color-background-focus;
+  }
+
 }

@@ -82,12 +82,6 @@
 
 /*Планшет*/
 @media(min-width:@tablet-width) {
-  .main-nav--closed {
-    display: flex;
-  }
-}
-
-@media(min-width:@tablet-width) {
   .main-nav--opened {
     .main-nav__list {
       display: flex;
@@ -103,7 +97,6 @@
   }
 }
 
-
 .main-nav__list {
   .no-list();
   position: absolute;
@@ -115,6 +108,7 @@
   background: #ffffff;
 
   @media (min-width: @tablet-width) {
+    position: static;
     flex-direction: row;
     gap: 34px;
   }
@@ -123,6 +117,8 @@
     // flex-direction: row;
     //  justify-content: space-between;
     //  padding-left: 91px;
+    position: static;
+    background: none;
     gap: 37px;
     width: 50%;
     justify-content: flex-end;
@@ -134,15 +130,16 @@
   padding-top: 22px;
   padding-bottom: 23px;
   color: @gray-darkest;
-  font-family: @alternate-font;
-  font-size: @font-size-md;
-  font-weight: 700;
-  line-height: 1em;
+  font-family: "Oswald", sans-serif;  
+  font-weight: 500;
+  font-size: 20px;    
+  line-height: 20px;
+  color: black;  //@gray-darkest;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
   border-bottom: 1px solid @gray-ights;
-
+    // состояния при наведении на ссылки
   &:hover {
     opacity: 0.6;
   }
@@ -153,19 +150,19 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 7px;
+    padding-bottom: 0; //7px;
     padding-top: 0;
-    font-size: @font-size-m;
+    font-size: 18px;    
+    line-height: 24px;
     font-weight: 400;
-    line-height: 1.39em;
-    color: @gray-dark;
+    color: black; //@gray-dark;
     border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: @font-size-md;
-    line-height: 1.25em;
-  }
+    font-size: 20px;
+    line-height: 30px;
+   }
 }
 
 .main-nav__link--active {
@@ -193,5 +190,12 @@
 .main-nav--index .main-nav__link {
   @media (min-width: @desktop-width) {
     color: #ffffff;
+  }
+}
+
+ .main-nav--link .main-nav__link--black {
+  @media (min-width: @desktop-width) {
+    color: black;
+    border-bottom: 2px solid @color-main;
   }
 }

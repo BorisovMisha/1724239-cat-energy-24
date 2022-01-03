@@ -40,7 +40,7 @@
   padding: 0 20px;
   padding-top: 30px;
   padding-bottom: 17px;
-  background-color: @gray-lighten;
+  background-color: #F2F2F2; //@gray-lighten;
 
   @media (min-width: @desktop-width) {
     width: 570px;
@@ -51,13 +51,23 @@
   margin-left: 70px;
   margin-top: 0;
   margin-bottom: 30px;
-  font-family: @alternate-font;
-  color: @gray-darkest;
-  font-size: @font-size-xl;
+  font-family: "Oswald", sans-serif;
+  color: black; //@gray-darkest;
+  font-size: 24px;
+  line-height: 37px;
   font-weight: 400;
-  line-height: 1.54em;
   text-transform: uppercase;
   background-color: @gray-lighten;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .categories__item-title--fat {
@@ -119,21 +129,37 @@
 
 .categories__item-content {
   margin-top: 0;
-  padding-bottom: 21px;
-  font-size: @font-size-sm;
-  line-height: 1.28em;
+  padding-bottom: 23px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 400;
+  color: #444444;
   background-color: @gray-lighten;
   border-bottom: 1px solid @gray;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+  }
 }
 
 .categories__item-button {
   position: relative;
-  margin-top: 6px;
-  font-family: @alternate-font;
-  color: @gray-darkest;
-  font-size: @font-size;
-  line-height: 1em;
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  font-family: "Oswald", sans-serif; //@alternate-font;
+  color: black; //@gray-darkest;
+  font-size: 16px;
+  line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
   background-color: @gray-lighten;
@@ -141,11 +167,29 @@
   &::after {
     content: "";
     position: absolute;
-    top: 3px;
-    left: 96px;
+    left: 95px;
     width: 24px;
     height: 11px;
     background-image: url("../img/decors/icon-right-arrow.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      left: 115px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 120px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+
   }
 }

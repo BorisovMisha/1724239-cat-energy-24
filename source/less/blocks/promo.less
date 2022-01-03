@@ -4,6 +4,14 @@
   background-size: 100%;
   background-position-y: 0;
 
+  //background-color: #68b738;
+  //ретиновая версия фона для мобильных устройств
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/decors/index-background-mobile@2x.png");
+    background-size: 640px auto;
+  }
+
+
   @media (min-width: @tablet-width) {
     background: none;
   }
@@ -18,8 +26,14 @@
     padding-top: 230px;
     margin-left: auto;
     margin-right: auto;
-  }
+    // background-color: #68b738;
 
+    // ретиновая версия фона для десктопа
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/decors/index-background-desktop@2x.png");
+      background-size: 1440px auto;
+    }
+  }
 }
 
 .promo__wrapper {
@@ -29,9 +43,21 @@
   background-size: auto;
   background-position: 50% 72%;
 
+  //ретиновая версия промо-изображения для мобильных устройств
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/decors/index-can-mobile@2x.png");
+    background-size: 560px auto;
+  }
+
   @media (min-width: @tablet-width) {
     width: 100%;
-    background-image: url("../img/decors/index-can-mobile.png");
+    background-image: url("../img/decors/index-can-tablet.png");
+
+    //ретиновая версия промо-изображения для планшета
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/decors/index-can-tablet@2x.png");
+      background-size: 1418px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -45,69 +71,102 @@
     padding-top: 197px;
     padding-bottom: 190px;
     padding-left: 121px;
+
+    //ретиновая версия промо-изображения для десктопа
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/decors/index-can-desktop@2x.png");
+      background-size: 1104px auto;
+    }
   }
 }
 
 .promo__title {
   margin-top: 0;
   margin-bottom: 25px;
-  font-family: @alternate-font;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
   color: black;
-  font-size: @font-size-xxl;
-  line-height: 1em;
   text-align: center;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 300px;
     margin-top: 100px;
     text-align: left;
-    /* margin-bottom: 52px; */
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
 .promo__content {
   margin-top: 0;
   margin-bottom: 300px;
-  font-family: @alternate-font;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
   color: black;
-  font-size: @font-size-sm;
-  line-height: 1em;
   text-transform: uppercase;
   text-align: center;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
     margin-bottom: 53px;
     text-align: left;
   }
 }
 
- /*кнопка Подобрать программу*/
+/*кнопка Подобрать программу*/
 .promo__button {
   display: block;
   margin: 0 auto;
   /*должна центрироваться*/
-  width: 244px;
-  height: 54px;
+  width: 280px; //244
+  height: 40px; //54
   color: @basic-white;
-  font-family: @alternate-font;
-  font-size: @font-size-md;
-  line-height: 2.86em;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  background-color: @color-main;
+  background-color: #68b738;
   border: none;
-     /*состояния при наведении*/
+  padding-top: 15px;
+
+  /*состояния при наведении*/
   &:hover {
     background-color: @color-background-hover;
   }
+
   &:active,
   &:focus {
     color: @color-background-focus;
   }
 
+  @media(min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    width: 244px;
+    height: 54px;
+  }
+
   @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+    width: 244px;
+    height: 54px;
     margin: 0;
     /*на десктопе центрироваться не должна*/
   }

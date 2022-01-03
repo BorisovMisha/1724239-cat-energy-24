@@ -9,22 +9,21 @@
 
 <body>
   <header class="page-header">
-    <nav class="main-nav main-nav--closed main-nav--nojs main-nav--index">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <a class="page-header__logo">
-        <picture>
-          <img class="page-header__logo-image" src="img/logos/logo-mobile.svg" width="191" height="38" alt="logo cat-energy">
-        </picture>
+        <img class="page-header__logo-image" src="img/logos/logo-image-mobile.svg" width="33" height="37" alt="logo-cat-image">
+        <img class="page-header__logo-text" src="img/logos/logo-text-mobile.svg" width="101" height="37" alt="logo-cat-text">
       </a>
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">Главная</a>
+          <a class="main-nav__link main-nav__link--black" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          <a class="main-nav__link main-nav__link--black" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active">Подбор программы</a>
+          <a class="main-nav__link main-nav__link--active main-nav__link--black">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -69,7 +68,9 @@
             </div>
             <!--choice div end-->
             <div class="form__fields form__fields--contacts">
-              <h2 class="form__fields-title form__fields-title--contacts">Контактные данные (владельца кота)</h2>
+              <div class="form__fields-header">
+                <h2 class="form__fields-title form__fields-title--contacts">Контактные данные (владельца кота)</h2>
+              </div>
               <label class="field-text">
                 <span class="field-text__title">E-mail:*</span>
                 <div class="field-text__icon field-text__icon-email">
@@ -85,14 +86,18 @@
             </div>
             <!--contacts div end-->
             <div class="form__fields form__fields--comment">
-              <h2 class="form__fields-title form__fields-title--comment">Комментарий</h2>
+              <div class="form__fields-header">
+                <h2 class="form__fields-title form__fields-title--comment">Комментарий</h2>
+              </div>
               <div class="field-text field-text--comment">
                 <textarea class="field-text__value field-text__value--comment" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
             </div>
             <!--comment div end-->
             <div class="form__fields form__fields--add">
-              <h2 class="form__fields-title form__fields-title--add">Дополнительно</h2>
+              <div class="form__fields-header">
+                <h2 class="form__fields-title form__fields-title--add">Дополнительно</h2>
+              </div>
               <label class="field-checkbox">
                 <input class="field-checkbox__value" type="checkbox" name="sugar-subs" checked>
                 <span class="field-checkbox__title">Сахарозаменитель</span>
@@ -142,7 +147,7 @@
     <!--contacts section end-->
     <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="#">
-        <img class="page-footer__logo-text" src="img/logos/logo-text.svg" width="128" height="24" alt="cat-energy">
+        <img class="page-footer__logo-text" src="img/logos/logo-text-mobile.svg" width="101" height="37" alt="logo-cat-text">
       </a>
       <ul class="page-footer__social-list social">
         <li class="social__item">

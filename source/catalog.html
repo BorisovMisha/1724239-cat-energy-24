@@ -9,22 +9,21 @@
 
 <body>
   <header class="page-header">
-    <nav class="main-nav main-nav--closed main-nav--nojs main-nav--index">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <a class="page-header__logo">
-        <picture>
-          <img class="page-header__logo-image" src="img/logos/logo-mobile.svg" width="191" height="38" alt="logo cat-energy">
-        </picture>
+        <img class="page-header__logo-image" src="img/logos/logo-image-mobile.svg" width="33" height="37" alt="logo-cat-image">
+        <img class="page-header__logo-text" src="img/logos/logo-text-mobile.svg" width="101" height="37" alt="logo-cat-text">
       </a>
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">Главная</a>
+          <a class="main-nav__link main-nav__link--black" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active">Каталог продукции</a>
+          <a class="main-nav__link main-nav__link--active main-nav__link--black">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="form.html">Подбор программы</a>
+          <a class="main-nav__link main-nav__link--black" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -39,7 +38,9 @@
           <div class="card-wrapper">
             <a class="card__image-link" href="#">
               <picture>
-                <img class="card__photo" src="img/content/chicken-small-mobile.png" alt="Small chicken">
+                <source media="(min-width: 1300px)" srcset="img/content/chicken-small-desktop.png 1x, img/content/chicken-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/content/chicken-small-tablet.png 1x, img/content/chicken-small-tablet@2x.png 2x">
+                <img class="card__photo" src="img/content/chicken-small-mobile.png" srcset="img/content/chicken-small-mobile@2x.png 2x" width="68" height="86" alt="Small chicken 500g">
               </picture>
             </a>
             <div class="card__content">
@@ -71,7 +72,9 @@
           <div class="card-wrapper">
             <a class="card__image-link" href="#">
               <picture>
-                <img class="card__photo" src="img/content/chicken-big-mobile.png" alt="Big chicken">
+                <source media="(min-width: 1300px)" srcset="img/content/chicken-big-desktop.png 1x, img/content/chicken-big-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/content/chicken-big-tablet.png 1x, img/content/chicken-big-tablet@2x.png 2x">
+                <img class="card__photo" src="img/content/chicken-big-mobile.png" srcset="img/content/chicken-big-mobile@2x.png 2x" width="84" height="101" alt="Big chicken 1000g">
               </picture>
             </a>
             <div class="card__content">
@@ -103,7 +106,9 @@
           <div class="card-wrapper">
             <a class="card__image-link" href="#">
               <picture>
-                <img class="card__photo" src="img/content/fish-small-mobile.png" alt="Small fish">
+                <source media="(min-width: 1300px)" srcset="img/content/fish-small-desktop.png 1x, img/content/fish-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/content/fish-small-tablet.png 1x, img/content/fish-small-tablet@2x.png 2x">
+                <img class="card__photo" src="img/content/fish-small-mobile.png" srcset="img/content/fish-small-mobile@2x.png 2x" width="68" height="78" alt="Small fish 500g">
               </picture>
             </a>
             <div class="card__content">
@@ -135,7 +140,9 @@
           <div class="card-wrapper">
             <a class="card__image-link" href="#">
               <picture>
-                <img class="card__photo" src="img/content/fish-big-mobile.png" alt="Big fish">
+                <source media="(min-width: 1300px)" srcset="img/content/fish-big-desktop.png 1x, img/content/fish-big-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/content/fish-big-tablet.png 1x, img/content/fish-big-tablet@2x.png 2x">
+                <img class="card__photo" src="img/content/fish-big-mobile.png" srcset="img/content/fish-big-mobile@2x.png 2x" width="84" height="101" alt="Big fish 1000g">
               </picture>
             </a>
             <div class="card__content">
@@ -167,7 +174,9 @@
           <div class="card-wrapper">
             <a class="card__image-link" href="#">
               <picture>
-                <img class="card__photo" src="img/content/buckwheat-small-mobile.png" alt="Small buckwheat">
+                <source media="(min-width: 1300px)" srcset="img/content/buckwheat-small-desktop.png 1x, img/content/buckwheat-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/content/buckwheat-small-tablet.png 1x, img/content/buckwheat-small-tablet@2x.png 2x">
+                <img class="card__photo" src="img/content/buckwheat-small-mobile.png" srcset="img/content/buckwheat-small-mobile@2x.png 2x" width="68" height="78" alt="Small buckwheat 500g">
               </picture>
             </a>
             <div class="card__content">
@@ -199,7 +208,9 @@
           <div class="card-wrapper">
             <a class="card__image-link" href="#">
               <picture>
-                <img class="card__photo" src="img/content/buckwheat-big-mobile.png" alt="Big buckwheat">
+                <source media="(min-width: 1300px)" srcset="img/content/buckwheat-big-desktop.png 1x, img/content/buckwheat-big-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/content/buckwheat-big-tablet.png 1x, img/content/buckwheat-big-tablet@2x.png 2x">
+                <img class="card__photo" src="img/content/buckwheat-big-mobile.png" srcset="img/content/buckwheat-big-mobile@2x.png 2x" width="84" height="100" alt="Big buckwheat 1000g">
               </picture>
             </a>
             <div class="card__content">
@@ -231,7 +242,9 @@
           <div class="card-wrapper">
             <a class="card__image-link" href="#">
               <picture>
-                <img class="card__photo" src="img/content/rice-small-mobile.png" alt="Small rice">
+                <source media="(min-width: 1300px)" srcset="img/content/rice-small-desktop.png 1x, img/content/rice-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/content/rice-small-tablet.png 1x, img/content/rice-small-tablet@2x.png 2x">
+                <img class="card__photo" src="img/content/rice-small-mobile.png" srcset="img/content/rice-small-mobile@2x.png 2x" width="72" height="84" alt="Small rice 500g">
               </picture>
             </a>
             <div class="card__content">
@@ -259,7 +272,7 @@
           <a class="card__button button" href="#">Заказать</a>
         </li>
         <!--card 7-th li end-->
-        <li class="catalog__more card card--more">
+        <li class="catalog__more card">
           <h2 class="catalog__more-title">
             <a class="catalog__more-link" href="#">Показать еще 100500 товаров</a>
           </h2>
@@ -271,8 +284,10 @@
     <!--catalog section end-->
 
     <section class="add-wares">
-      <div class="add-wares__wrapper">
+      <div class="add-wares__header">
         <h2 class="add-wares__title">Дополнительные товары</h2>
+      </div>
+      <div class="add-wares__wrapper">
         <ul class="add-wares__list">
           <li class="add-wares__item">
             <h3 class="add-wares__item-title">Сахарозаменитель</h3>
@@ -326,7 +341,7 @@
     <!--contacts section end-->
     <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="#">
-        <img class="page-footer__logo-text" src="img/logos/logo-text.svg" width="128" height="24" alt="cat-energy">
+        <img class="page-footer__logo-text" src="img/logos/logo-text-mobile.svg" width="101" height="37" alt="logo-cat-text">
       </a>
       <ul class="page-footer__social-list social">
         <li class="social__item">

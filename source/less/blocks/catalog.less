@@ -1,18 +1,36 @@
 .catalog {
-  width: @mobile-width;
+  width: 320px;
   margin: 0 auto;
   padding-top: 15px;
   background-color: #ffffff;
+
+  @media(min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media(min-width: @desktop-width) {
+    width: 1220px;
+  }
 }
 
 .catalog__title {
   margin-top: 0;
   margin-bottom: 28px;
   padding: 0 20px;
-  font-family: @alternate-font;
-  font-size: @font-size-xxl;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
   font-weight: 400;
-  line-height: 1.66em;
+
+  @media(min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media(min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .catalog__list {
@@ -42,66 +60,109 @@
 .catalog__more {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-top: 80px;
+  justify-content: flex-start;
+  align-items: center;
+  //padding-top: 160px;
+  padding: 0;
+  padding-bottom: 38px;
   position: relative;
+  width: 320px;
 }
 
 .catalog__more-title {
-  padding-left: 40px;
+  position: relative;
   margin-top: 0;
   margin-bottom: 8px;
+  //margin: 0 auto;
+  padding-top: 160px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
 
   &::before {
     content: "";
     position: absolute;
-    top: 40px;
-    left: 144px;
-    width: 30px;
-    height: 2px;
+    top: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/icons/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
 
-    background-color: @gray;
+    @media(min-width: @tablet-width) {
+      background-image: url("../img/icons/icon-plus.svg");
+    }
+
+    @media(min-width: @desktop-width) {
+      background-image: url("../img/icons/icon-plus.svg");
+    }
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 40px;
-    left: 144px;
-    width: 30px;
-    height: 2px;
-
-    background-color: @gray;
-    transform: rotate(90deg);
+  @media(min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
   }
 
+  @media(min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .catalog__more-link {
-  font-family: @alternate-font;
-  color: @gray-darkest;
-  font-size: @font-size;
+  font-family: "Oswald", sans-serif;
+  color: #111111; //@gray-darkest;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.25em;
+  line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media(min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media(min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .catalog__more-text {
-  margin-top: 0;
-  margin-bottom: 22px;
-  padding-left: 30px;
-  font-size: @font-size-xs;
-  line-height: 1.33em;
+  width: 170px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 87px;
+  margin-top: 23px;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+
+  @media(min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media(min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
-  /*кнопка Показать все*/
+
+/*кнопка Показать все*/
 .catalog__more-show {
   display: block;
   width: 100%;
-  margin-right: 20px;
-  font-family: @alternate-font;
-  color: @gray-darker;
-  background-color: @gray-lighten;
+  //margin-right: 20px;
+  font-family: "Arial", sans-serif; // @alternate-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444; //@gray-darker;
+  background-color: #F2F2F2; //@gray-lighten;
 
   @media (min-width: @tablet-width) {
     width: 250px;
@@ -111,12 +172,14 @@
   @media (min-width: @desktop-width) {
     width: 170px;
   }
-       /*состояния по наведению*/
+
+  /*состояния по наведению*/
   &:hover {
     background-color: @gray-ultra-lights;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     color: @color-text-focus;
   }
 }

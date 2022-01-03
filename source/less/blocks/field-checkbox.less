@@ -11,10 +11,11 @@
 }
 
 .field-checkbox__title {
-  font-family: @alternate-font;
-  color: @gray-dark;
-  font-size: @font-size;
-  line-height: 1.12em;
+  font-family: "Oswald", sans-serif;
+  color: black;
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 16px;
   text-transform: uppercase;
   cursor: pointer;
 
@@ -25,7 +26,7 @@
     left: 0;
     width: 28px;
     height: 28px;
-    border: 1px solid #cfcfcf;
+    border: 1px solid #CFCFCF;
   }
 
   &::after {
@@ -38,6 +39,18 @@
     height: 16px;
     background-image: url("../img/icons/icon-tick.svg");
     background-repeat: no-repeat;
+  }
+
+  @media(min-width:@tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 19px;
+  }
+
+  @media(min-width:@desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 26px;
   }
 }
 

@@ -23,11 +23,43 @@
 
 /*Логотип Cat Energy - ссылка с картинкой*/
 .page-header__logo {
-  // padding-top: 13px;
-  // padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  //justify-content: space-around;
+  flex-glow: 1;
+
+
+  @media (min-width: @tablet-width) {
+    margin-left: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 110px;
+  }
 }
 
 .page-header__logo-image {
+  margin-right: 56px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 14px;
+  }
+}
+
+.page-header__logo-text {
   &:hover {
     opacity: 0.8;
   }

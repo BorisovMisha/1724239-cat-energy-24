@@ -23,32 +23,38 @@
 
 .advantages__title {
   margin: 0;
-  font-family: @alternate-font;
-  font-size: @font-size-xxl;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
   font-weight: 400;
-  line-height: 1.66em;
+  color: black;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 50px;
-    font-size: @font-size-xxxl;
-    line-height: 1em;
+    margin-bottom: 32px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 32px;
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
 .advantages__list {
   .no-list();
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   padding-left: 80px;
   padding-top: 30px;
   counter-reset: number;
 
   @media (min-width: @tablet-width) {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    padding-left: 0;
-    padding-right: 80px;
-    padding-top: 31px;
+    grid-template-columns: 245px 245px;
+    align-items: flex-start;
+    row-gap: 37px;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
@@ -61,8 +67,10 @@
 .advantages__item {
   position: relative;
   margin-bottom: 15px;
-  font-size: @font-size-sm;
-  line-height: 1.28em;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
 
   &::before {
     content: "";
@@ -80,60 +88,37 @@
 
   @media (min-width: @tablet-width) {
     width: 245px;
-    padding-top: 30px;
+    padding-top: 110px; //30px;
     padding-bottom: 60px;
     margin-bottom: 37px;
-    font-size: @font-size;
-    line-height: 1.5em;
+    font-size: 16px;
+    line-height: 24px;
+   // align-items: flex-start;
 
     &::before {
       left: 0;
       top: -50px;
     }
 
-    /*
-    &::after {
-      content: "1";
-      position: absolute;
-      left: 115px;
-      top: 0;
-      z-index: -1;
-      font-size: 200px;
-      font-family: "oswald", "ArialMT", sans-serif;
-      color: @gray-very-lights;
-    }
-     */
     &::after {
       counter-increment: number;
       content: counter(number) "";
-
       position: absolute;
-      top: 0;
-      left: 115px;
+      display: block;
+      top: -66px;
+      right: 6px;
       z-index: -1;
-
-      font-family: @alternate-font;
-      color: @gray-very-lights;
-      font-size: 200px;
+      font-family: "Oswald", sans-serif;
+      color: #CDCDCD;
+      font-size: 280px;
+      line-height: 280px;
     }
-
-    /*
-    &:nth-child(2)::after {
-      content: "2";
-    }
-
-    &:nth-child(3)::after {
-      content: "3";
-    }
-
-    &:last-child::after {
-      content: "4";
-    }
- */
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -141,63 +126,48 @@
   content: "";
   position: absolute;
   top: 0;
-  left: -80px;
   width: 60px;
   height: 60px;
   background-image: url("../img/decors/icon-leaf.svg");
   background-repeat: no-repeat;
-
-  /* background-image: url("../img/decors/advantage-leaf.png");*/
-  @media (min-width: @tablet-width) {
-    top: -60px;
-    left: 0;
-  }
+  background-size: 27px;
 }
 
 .advantages__item--fast::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -80px;
   width: 60px;
   height: 60px;
   background-image: url("../img/decors/icon-powder.svg");
   background-repeat: no-repeat;
-
+  background-size: 27px;
+  /*
   @media (min-width: @tablet-width) {
-    top: -60px;
+    top: 0;
     left: 0;
   }
+  */
 }
 
 .advantages__item--meal::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -80px;
   width: 60px;
   height: 60px;
   background-image: url("../img/decors/icon-meal.svg");
   background-repeat: no-repeat;
-
-  @media (min-width: @tablet-width) {
-    top: -60px;
-    left: 0;
-  }
+  background-size: 27px;
 }
 
 .advantages__item--time::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -80px;
   width: 60px;
   height: 60px;
   background-image: url("../img/decors/icon-clock.svg");
   background-repeat: no-repeat;
-
-  @media (min-width: @tablet-width) {
-    top: -60px;
-    left: 0;
-  }
+  background-size: 27px;
 }

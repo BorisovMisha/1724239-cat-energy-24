@@ -8,7 +8,8 @@
   //ретиновая версия фона для мобильных устройств
   @media (min-resolution: 2dppx) {
     background-image: url("../img/decors/index-background-mobile@2x.png");
-    background-size: 640px auto;
+    background-size: contain;
+    //background-size: 640px auto;
   }
 
 
@@ -31,7 +32,7 @@
     // ретиновая версия фона для десктопа
     @media (min-resolution: 2dppx) {
       background-image: url("../img/decors/index-background-desktop@2x.png");
-      background-size: 1440px auto;
+      background-size: 50%;
     }
   }
 }
@@ -46,17 +47,19 @@
   //ретиновая версия промо-изображения для мобильных устройств
   @media (min-resolution: 2dppx) {
     background-image: url("../img/decors/index-can-mobile@2x.png");
-    background-size: 560px auto;
+    background-size: 280px auto;
   }
 
   @media (min-width: @tablet-width) {
     width: 100%;
     background-image: url("../img/decors/index-can-tablet.png");
+    background-size: 709px auto;
+    background-position-y: 100%; //bottom
+    padding-bottom: 530px;
 
     //ретиновая версия промо-изображения для планшета
     @media (min-resolution: 2dppx) {
       background-image: url("../img/decors/index-can-tablet@2x.png");
-      background-size: 1418px auto;
     }
   }
 
@@ -71,6 +74,8 @@
     padding-top: 197px;
     padding-bottom: 190px;
     padding-left: 121px;
+    background-size: 552px;
+    background-position-x: 65%;
 
     //ретиновая версия промо-изображения для десктопа
     @media (min-resolution: 2dppx) {
@@ -117,6 +122,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {

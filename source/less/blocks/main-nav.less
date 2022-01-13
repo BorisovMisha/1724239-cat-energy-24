@@ -8,18 +8,6 @@
   margin-left: auto;
   padding-left: 20px;
   padding-right: 20px;
-
-  @media (min-width: @tablet-width) {
-    // width: 440px;
-    // margin: 0;
-    // margin-left: auto;
-  }
-
-  @media (min-width: @desktop-width) {
-    // width: 50%;
-    // margin: 0;
-    // margin-left: auto;
-  }
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -81,7 +69,7 @@
 }
 
 /*Планшет*/
-@media(min-width:@tablet-width) {
+@media (min-width: @tablet-width) {
   .main-nav--opened {
     .main-nav__list {
       display: flex;
@@ -93,7 +81,7 @@
     right: -20%;
     top: 100%;
     background-color: #ffffff;
-    width: calc(100%+20px);
+    width: calc(100% + 20px);  //??
   }
 }
 
@@ -129,17 +117,17 @@
   display: block;
   padding-top: 22px;
   padding-bottom: 23px;
-  color: @gray-darkest;
-  font-family: "Oswald", sans-serif;  
+  color: #000000;
+  font-family: "Oswald", sans-serif;
   font-weight: 500;
-  font-size: 20px;    
-  line-height: 20px;
-  color: black;  //@gray-darkest;
+  font-size: 20px;
+  line-height: 20px;  
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
   border-bottom: 1px solid @gray-ights;
-    // состояния при наведении на ссылки
+
+  // состояния при наведении на ссылки
   &:hover {
     opacity: 0.6;
   }
@@ -150,19 +138,19 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 0; //7px;
+    padding-bottom: 0;
     padding-top: 0;
-    font-size: 18px;    
+    font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    color: black; //@gray-dark;
+    color: #000000;
     border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
-   }
+  }
 }
 
 .main-nav__link--active {
@@ -193,9 +181,9 @@
   }
 }
 
- .main-nav--link .main-nav__link--black {
+.main-nav--link .main-nav__link--black {
   @media (min-width: @desktop-width) {
-    color: black;
+    color: #000000;
     border-bottom: 2px solid @color-main;
   }
 }

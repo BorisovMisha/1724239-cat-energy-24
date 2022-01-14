@@ -1,8 +1,8 @@
 .field-radio {
-  position: relative;
-  margin-bottom: 3px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  //position: relative;
+  //margin-bottom: 3px;
+  //padding-top: 10px;
+  //padding-bottom: 10px;
 }
 
 .field-radio__state {
@@ -10,7 +10,11 @@
 }
 
 .field-radio__title {
-  padding-left: 16px;
+  position: relative;
+  display: block;
+  padding-left: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-family: "Oswald", sans-serif;
   color: #222222;
   font-size: 16px;
@@ -22,36 +26,51 @@
   &::before {
     content: "";
     position: absolute;
-    top: 10px;
-    left: -15px;
+    top: 5px;
+    left: 0;
     width: 28px;
     height: 28px;
     border: 1px solid #cecece;
     border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+      top: 0;
+      left: 0;
+    }
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: 18px;
-    left: -7px;
+    top: 13px;
+    left: 8px;
     display: none;
     width: 12px;
     height: 12px;
     background-color: @color-main;
     border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 18px;
+      height: 18px;
+      top: 11px;
+      left: 11px;
+    }
   }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    padding-left: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    padding-left: 20px;
+    padding-left: 60px;
   }
 }
 

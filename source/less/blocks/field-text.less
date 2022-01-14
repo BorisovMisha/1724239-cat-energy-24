@@ -3,9 +3,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-items: center;
   column-gap: 13px;
-  margin-bottom: 15px;
-  padding-right: 20px;
 }
 
 /*название поля для ввода данных анкеты*/
@@ -34,21 +33,24 @@
 }
 
 /*содержание поля для ввода данных анкеты*/
-.fied-text__value {
+.field-text__value {
   flex-grow: 1;
-  height: 44px;
+  height: 40px;
   margin-left: 15px;
   padding: 10px 20px;
-  padding-left: 13px;
+  padding-left: 15px;
   color: #444444;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #e7e7e7;
+  border-radius: 0;
 
   @media (min-width: @tablet-width) {
+    height: 52px;
+    padding-left: 18px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -100,14 +102,16 @@
 
 .field-text__icon {
   position: relative;
+  flex-grow: 1;
 
   &::after {
     content: "";
     position: absolute;
     display: block;
-    top: 2px;
-    right: 2px;
-    width: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 15px;
     height: 17px;
   }
 }
@@ -122,4 +126,14 @@
   background-image: url("../img/icons/icon-phone.svg");
   background-repeat: no-repeat;
   background-position: right;
+}
+
+.field-text__value--telephone {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.field-text__value--email {
+  width: 100%;
+  padding-right: 40px;
 }

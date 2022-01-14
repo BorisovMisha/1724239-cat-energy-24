@@ -14,7 +14,7 @@
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logos/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logos/logo-tablet.svg">
-          <img class="page-header__logo-image" src="img/logos/logo-image-mobile.svg" width="34" height="38" alt="logo-cat-image">
+          <img class="page-header__logo-image" src="img/logos/logo-image-mobile.svg" alt="logo-cat-image">
         </picture>
         <img class="page-header__logo-text" src="img/logos/logo-text-mobile.svg" width="101" height="18" alt="logo-cat-text">
       </a>
@@ -39,95 +39,95 @@
       <div class="program-select__wrapper">
         <h1 class="program-select__title">Подбор программы</h1>
         <p class="program-select__hint">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <form class="form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="form__wrapper">
-            <div class="form__fields form__fields--cat">
-              <label class="field-text">
-                <span class="field-text__title">Имя:*</span>
-                <input class="field-text__value" type="text" name="nickname" placeholder="Барсик" required>
-              </label>
-              <label class="field-text">
-                <span class="field-text__title">Вес (кг):*</span>
-                <input class="field-text__value" type="text" name="weight" placeholder="7" required>
-              </label>
-              <label class="field-text">
-                <span class="field-text__title">Возраст (лет):</span>
-                <input class="field-text__value" type="text" name="age" placeholder="7">
-              </label>
-            </div>
-            <!--cat info div end-->
-            <div class="form__fields form__fields--choice">
-              <label class="field-radio">
-                <input class="field-radio__state" type="radio" name="choice">
-                <span class="field-radio__title">Похудение</span>
-              </label>
-              <label class="field-radio">
-                <input class="field-radio__state" type="radio" name="choice">
-                <span class="field-radio__title">Набор массы</span>
-              </label>
-              <label class="field-radio">
-                <input class="field-radio__state" type="radio" name="choice">
-                <span class="field-radio__title">Не знаю (нужен ваш совет)</span>
-              </label>
-            </div>
-            <!--choice div end-->
-            <div class="form__fields form__fields--contacts">
-              <div class="form__fields-header">
-                <h2 class="form__fields-title form__fields-title--contacts">Контактные данные (владельца кота)</h2>
+      </div>
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="form__wrapper">
+          <div class="form__fields form__fields--cat">
+            <label class="field-text">
+              <span class="field-text__title">Имя:*</span>
+              <input class="field-text__value" type="text" name="nickname" placeholder="Барсик" required>
+            </label>
+            <label class="field-text">
+              <span class="field-text__title">Вес (кг):*</span>
+              <input class="field-text__value" type="text" name="weight" placeholder="7" required>
+            </label>
+            <label class="field-text">
+              <span class="field-text__title">Возраст (лет):</span>
+              <input class="field-text__value" type="text" name="age" placeholder="7">
+            </label>
+          </div>
+          <!--cat info div end-->
+          <div class="form__fields form__fields--choice">
+            <label class="field-radio">
+              <input class="field-radio__state" type="radio" name="choice" checked>
+              <span class="field-radio__title">Похудение</span>
+            </label>
+            <label class="field-radio">
+              <input class="field-radio__state" type="radio" name="choice">
+              <span class="field-radio__title">Набор массы</span>
+            </label>
+            <label class="field-radio">
+              <input class="field-radio__state" type="radio" name="choice">
+              <span class="field-radio__title">Не знаю (нужен ваш совет)</span>
+            </label>
+          </div>
+          <!--choice div end-->
+          <div class="form__fields-header">
+            <h2 class="form__fields-title form__fields-title--contacts">Контактные данные (владельца кота)</h2>
+          </div>
+          <div class="form__fields form__fields--contacts">
+            <label class="field-text">
+              <span class="field-text__title">E-mail:*</span>
+              <div class="field-text__icon field-text__icon-email">
+                <input class="field-text__value field-text__value--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
               </div>
-              <label class="field-text">
-                <span class="field-text__title">E-mail:*</span>
-                <div class="field-text__icon field-text__icon-email">
-                  <input class="field-text__value field-text__value--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-                </div>
-              </label>
-              <label class="field-text">
-                <span class="field-text__title">Телефон:*</span>
-                <div class="field-text__icon field-text__icon-telephone">
-                  <input class="field-text__value field-text__value--telephone" type="tel" name="phone" placeholder="8 (960) 900-60-90" pattern="8\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-                </div>
-              </label>
-            </div>
-            <!--contacts div end-->
-            <div class="form__fields form__fields--comment">
-              <div class="form__fields-header">
-                <h2 class="form__fields-title form__fields-title--comment">Комментарий</h2>
+            </label>
+            <label class="field-text">
+              <span class="field-text__title">Телефон:*</span>
+              <div class="field-text__icon field-text__icon-telephone">
+                <input class="field-text__value field-text__value--telephone" type="tel" name="phone" placeholder="8 (960) 900-60-90" pattern="8\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
               </div>
-              <div class="field-text field-text--comment">
-                <textarea class="field-text__value field-text__value--comment" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
-              </div>
-            </div>
-            <!--comment div end-->
-            <div class="form__fields form__fields--add">
-              <div class="form__fields-header">
-                <h2 class="form__fields-title form__fields-title--add">Дополнительно</h2>
-              </div>
-              <label class="field-checkbox">
-                <input class="field-checkbox__value" type="checkbox" name="sugar-subs" checked>
-                <span class="field-checkbox__title">Сахарозаменитель</span>
-              </label>
-              <label class="field-checkbox">
-                <input class="field-checkbox__value" type="checkbox" name="water">
-                <span class="field-checkbox__title">Питьевая вода</span>
-              </label>
-              <label class="field-checkbox">
-                <input class="field-checkbox__value" type="checkbox" name="milk">
-                <span class="field-checkbox__title">Молоко</span>
-              </label>
-              <label class="field-checkbox">
-                <input class="field-checkbox__value" type="checkbox" name="vitamins">
-                <span class="field-checkbox__title">Витамины</span>
-              </label>
-            </div>
-            <!--additional div end-->
-            <div class="field-action">
-              <button class="field-action__button button" type="submit">Отправить заявку</button>
-              <span class="field-action__hint">* — Обязательные поля</span>
+            </label>
+          </div>
+          <!--contacts div end-->
+          <div class="form__fields-header">
+            <h2 class="form__fields-title form__fields-title--comment">Комментарий</h2>
+          </div>
+          <div class="form__fields form__fields--comment">
+            <div class="field-text field-text--comment">
+              <textarea class="field-text__value field-text__value--comment" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </div>
-          <!--form wrapper end-->
-        </form>
-      </div>
+          <!--comment div end-->
+          <div class="form__fields-header">
+            <h2 class="form__fields-title form__fields-title--add">Дополнительно</h2>
+          </div>
+          <div class="form__fields form__fields--add">
+            <label class="field-checkbox">
+              <input class="field-checkbox__value" type="checkbox" name="sugar-subs" checked>
+              <span class="field-checkbox__title">Сахарозаменитель</span>
+            </label>
+            <label class="field-checkbox">
+              <input class="field-checkbox__value" type="checkbox" name="water">
+              <span class="field-checkbox__title">Питьевая вода</span>
+            </label>
+            <label class="field-checkbox">
+              <input class="field-checkbox__value" type="checkbox" name="milk">
+              <span class="field-checkbox__title">Молоко</span>
+            </label>
+            <label class="field-checkbox">
+              <input class="field-checkbox__value" type="checkbox" name="vitamins">
+              <span class="field-checkbox__title">Витамины</span>
+            </label>
+          </div>
+          <!--additional div end-->
+          <div class="field-action">
+            <button class="field-action__button button" type="submit">Отправить заявку</button>
+            <span class="field-action__hint">* — Обязательные поля</span>
+          </div>
+        </div>
+        <!--form wrapper end-->
+      </form>
       <!--program-select section wrapper end-->
     </section>
     <!--program-select section end-->

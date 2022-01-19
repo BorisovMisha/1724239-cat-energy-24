@@ -96,8 +96,9 @@ exports.createWebp = createWebp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/icons/icon-vk-mobile.svg", "source/img/icons/icon-insta-mobile.svg",
-      "source/img/icons/icon-fb-mobile.svg", "source/img/icons/icon-htmlacademy.svg")
+  //return gulp.src("source/img/icons/icon-vk-mobile.svg", "source/img/icons/icon-insta-mobile.svg",
+    //  "source/img/icons/icon-fb-mobile.svg", "source/img/icons/icon-htmlacademy.svg")
+    return gulp.src("source/img/icons/*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -135,7 +136,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,

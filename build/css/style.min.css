@@ -518,6 +518,7 @@ body {
   padding-right: 20px;
   padding-bottom: 24px;
   border-bottom: 1px solid #ebebeb;
+  background: linear-gradient(to bottom, #ffffff 78px, #f2f2f2 68px, #f2f2f2 100%);
 }
 @media (min-width: 768px) {
   .card {
@@ -1395,11 +1396,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     grid-column-start: 1;
     grid-column-end: 5;
     width: 1220px;
     margin: auto;
     padding: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 .field-action__hint {
@@ -1422,6 +1426,7 @@ body {
     font-size: 16px;
     line-height: 16px;
     text-align: left;
+    margin: 0;
   }
 }
 /*кнопка Отправить заявку*/
@@ -1488,7 +1493,8 @@ body {
 }
 @media (min-width: 768px) {
   .field-checkbox__title::before {
-    top: 10px;
+    width: 40px;
+    height: 40px;
   }
 }
 .field-checkbox__title::after {
@@ -1504,21 +1510,22 @@ body {
 }
 @media (min-width: 768px) {
   .field-checkbox__title::after {
-    top: 15px;
+    width: 26px;
+    height: 26px;
   }
 }
 @media (min-width: 768px) {
   .field-checkbox__title {
     font-size: 20px;
     line-height: 30px;
-    padding-left: 19px;
+    padding-left: 60px;
   }
 }
 @media (min-width: 1440px) {
   .field-checkbox__title {
     font-size: 20px;
     line-height: 30px;
-    padding-left: 26px;
+    padding-left: 60px;
   }
 }
 .field-checkbox__value:checked + .field-checkbox__title::after {
@@ -1634,7 +1641,6 @@ body {
 .field-text__value {
   flex-grow: 1;
   height: 40px;
-  margin-left: 15px;
   padding: 10px 20px;
   padding-left: 15px;
   color: #444444;
@@ -1900,8 +1906,8 @@ body {
   .form__fields--contacts {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    -moz-column-gap: 18px;
-         column-gap: 18px;
+    -moz-column-gap: 78px;
+         column-gap: 78px;
     grid-column-start: 1;
     grid-column-end: 5;
     width: 1220px;
@@ -2307,6 +2313,8 @@ body {
 }
 @media (min-width: 1440px) {
   .page-header {
+    position: relative;
+    z-index: 2;
     width: 1220px;
     padding-left: 0;
     padding-right: 0;
@@ -2433,13 +2441,13 @@ body {
 .promo {
   background-image: url("../img/decors/index-background-mobile.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position-y: 0;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .promo {
     background-image: url("../img/decors/index-background-mobile@2x.png");
-    background-size: contain;
+    background-size: cover;
   }
 }
 @media (min-width: 768px) {
@@ -2449,6 +2457,7 @@ body {
 }
 @media (min-width: 1440px) {
   .promo {
+    background: linear-gradient(90deg, #ffffff 0, #ffffff 0, #68b738 0, #68b738 100%);
     background-image: url("../img/decors/index-background-desktop.png");
     background-repeat: no-repeat;
     background-size: 50%;
@@ -2468,6 +2477,7 @@ body {
 }
 .promo__wrapper {
   width: 100%;
+  padding-top: 27px;
   background-image: url("../img/decors/index-can-mobile.png");
   background-repeat: no-repeat;
   background-size: auto;
@@ -2481,8 +2491,12 @@ body {
 }
 @media (min-width: 768px) {
   .promo__wrapper {
-    width: 100%;
-    position: relative;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0;
     background-image: url("../img/decors/index-can-tablet.png");
     background-size: 709px auto;
     background-position-y: 100%;
@@ -2517,12 +2531,15 @@ body {
   }
 }
 .promo__title {
+  max-width: 250px;
   margin-top: 0;
   margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   line-height: 36px;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
   font-weight: 400;
 }
@@ -2530,15 +2547,18 @@ body {
   .promo__title {
     font-size: 60px;
     line-height: 60px;
-    width: 700px;
+    max-width: 535px;
+    margin-left: 0;
+    margin-right: 0;
     text-align: left;
-    padding-left: 200px;
+    padding-left: 117px;
+    margin: 0;
+    color: #000000;
   }
 }
 @media (min-width: 1440px) {
   .promo__title {
-    width: 300px;
-    margin-top: 100px;
+    width: 415px;
     text-align: left;
     font-size: 60px;
     line-height: 60px;
@@ -2561,7 +2581,7 @@ body {
     line-height: 20px;
     margin-bottom: 30px;
     text-align: left;
-    padding-left: 200px;
+    padding-left: 117px;
   }
 }
 @media (min-width: 1440px) {
@@ -2601,18 +2621,15 @@ body {
 }
 @media (min-width: 768px) {
   .promo__button {
-    position: absolute;
-    top: 200px;
-    left: 200px;
     font-size: 20px;
     line-height: 20px;
     width: 244px;
-    height: 54px;
+    min-height: 54px;
+    margin-left: 117px;
   }
 }
 @media (min-width: 1440px) {
   .promo__button {
-    position: static;
     font-size: 20px;
     line-height: 20px;
     width: 244px;
